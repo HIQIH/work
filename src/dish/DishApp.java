@@ -10,7 +10,7 @@ public class DishApp {
     static List<Dish> dishList=new ArrayList<>();
     public static void main(String[] args) {
         initDish();
-        System.out.println(dishList);
+
     }
     //初始化菜品
     public static void initDish(){
