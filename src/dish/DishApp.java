@@ -60,9 +60,8 @@ public class DishApp {
     public static void showDisMenu(){
         System.out.println("----请点菜----");
         //遍历集合
-        for(int i=0;i<dishList.size();i++){
-            Dish dish=dishList.get(i);
-            System.out.println(dish.id+"\t"+dish.name+"\t"+ dish.price+"元");
+        for (Dish dish : dishList) {
+            System.out.println(dish.id + "\t" + dish.name + "\t" + dish.price + "元");
         }
         System.out.println("---输入序号点菜，按0返回上一级---");
     }
@@ -70,9 +69,8 @@ public class DishApp {
     //已点菜品
     public static void showPersonDish(){
         System.out.println("---您已点菜品---");
-        for(int i=0;i<personList.size();i++){
-            Dish dish=personList.get(i);
-            System.out.println(dish.id+"\t"+dish.name+"\t"+ dish.price+"元");
+        for (Dish dish : personList) {
+            System.out.println(dish.id + "\t" + dish.name + "\t" + dish.price + "元");
         }
     }
 
@@ -80,8 +78,8 @@ public class DishApp {
     public static void pay(){
         System.out.println("---正在结算---");
         double total=0f;
-        for(int i=0;i<personList.size();i++){
-            total=total+personList.get(i).price;
+        for (Dish dish : personList) {
+            total = total + dish.price;
         }
         System.out.println("您一共消费了："+total+"元");
     }
